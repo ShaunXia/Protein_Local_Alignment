@@ -1,0 +1,8 @@
+name: local_alignment
+title:
+account: proteinlocalalignment
+server: shinyapps.io
+appId: 140191
+bundleId: 625719
+url: https://proteinlocalalignment.shinyapps.io/local_alignment/
+when: 1480123512.76329

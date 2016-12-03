@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "\n# This is the user-interface definition of a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\nlibrary(ggplot2)\nfluidPage(\n\n  sidebarLayout(\n    sidebarPanel(\n      textInput('str1', 'String 1',\"KRSLWRSRAPG\"),\n      textInput('str2', 'String 2',\"SRLWRSG\"),\n      \n      hr(),\n      fluidRow(\n      column(5,numericInput('s_gap', 'Gap',-10)),\n      column(5,numericInput('s_ext', 'Extension',-1)),\n      column(9,selectInput('score_matric', 'Scoring Matrices', c(\"BLOSUM62\",\"PAM250\"), multiple=FALSE, selectize=FALSE))\n      ),\n      actionButton('align_but', 'Alignment'),\n\n      hr(),\n      h2(\"Filter\"),\n      \n      hr(),\n      numericInput('s_threshold', 'Threshold(Score>=)',5),\n      actionButton('get_sub', 'Get Suboptiomal'),\n      br(),\n      hr(),\n      #selectInput('sub_list', 'Suboptiomal', state.name, multiple=TRUE, selectize=FALSE),\n      htmlOutput(\"sub_UI\")\n      #verbatimTextOutput('out3')\n      \n    ),\n    \n    mainPanel(\n      tabsetPanel(type = \"tabs\", \n                  tabPanel(\"Table\", \n                           DT::dataTableOutput('dp_table'),\n                           hr(),\n                           h4(\"Suboptimal Result\"),\n                           hr(),\n                           DT::dataTableOutput('res_table'),\n                           hr(),\n                           verbatimTextOutput('output_area')\n                           ),\n                  tabPanel(\"Plot\", plotOutput(\"dotplot\"))\n                  #tabPanel(\"Summary\", verbatimTextOutput(\"summary\"))\n                  \n      )\n    )\n    \n  )\n)",
+    "created" : 1479856141078.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2347070513",
+    "id" : "BB2A6D8",
+    "lastKnownWriteTime" : 1480123353,
+    "last_content_update" : 1480123353763,
+    "path" : "C:/Users/shanc/Google Drive/2016F/CSC530/FinalProject/local_alignment/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
